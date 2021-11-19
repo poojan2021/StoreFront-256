@@ -1,0 +1,5 @@
+ [
+    {"FirstName": "Joe","LastName":"Oakes","PhoneNumber":"83120912","EamilAddress":"joeOakes121@cake.com","ShopperAddress":"1211 woodland Abington PA 19001","Shopperage":24,"ProductPurchased":"Truffle cake","PriceofProduct": "$12","PaymentMethod": "Cash"},
+    {"FirstName": "Poojan","LastName":"Patel","PhoneNumber":"221212112","EamilAddress":"Pjcooldude@cake.com","ShopperAddress":"123 woodland Abington PA 19001","Shopperage":21,"ProductPurchased":"Chocolate cake","PriceofProduct": "$6","PaymentMethod": "Credit card"}
+]
+
