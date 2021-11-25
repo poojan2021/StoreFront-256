@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shopper Management</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<header>
+  <div class="text-center" style="background-color: #32323c"> <img src="images/logo.svg" alt=""/> </div>
+</header>
+<script>
+(function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script> 
+<script>
+window.onload=function(){
+    const formElement = document.querySelector('form#personForm')
+
+    // convert the form to JSON
+    const getFormJSON = (form) => {
+      const data = new FormData(form);
+      return Array.from(data.keys()).reduce((result, key) => {
+        if (result[key]) {
+          result[key] = data.getAll(key)
+          return result
+        }
+        result[key] = data.get(key);
+        return result;
+      }, {});
+    };
+
+    const handler = (event) => {
+      event.preventDefault();
+      const valid = formElement.reportValidity();
+      if (valid) {
+        const result = getFormJSON(formElement);
+
+        const output = {
+            result
+        }
+        console.log(output)
+      }
+    }
+
+    formElement.addEventListener("submit", handler)
+}
+</script>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #32323c;"> <a class="store_name" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent navbarDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="Main.html">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">Preorder</a> </li>
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="In-Stock.html">In Stock</a> </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Brands </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Nike</a> <a class="dropdown-item" href="#">Adidas</a> <a class="dropdown-item" href="#">Under Armour</a> <a class="dropdown-item" href="#">Vans</a> <a class="dropdown-item" href="#">Puma</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Other</a> </div>
+      </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Men </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">7.5 - 8</a> <a class="dropdown-item" href="#">8.5 - 9</a> <a class="dropdown-item" href="#">9 - 9.5</a> <a class="dropdown-item" href="#">9.5 - 10</a> <a class="dropdown-item" href="#">10.5 - 11</a> <a class="dropdown-item" href="#">11.5 - 12</a> <a class="dropdown-item" href="#">12 - 13</a> <a class="dropdown-item" href="#">14 - 15</a> </div>
+      </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Women </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">7.5 - 8</a> <a class="dropdown-item" href="#">8.5 - 9</a> <a class="dropdown-item" href="#">9 - 9.5</a> <a class="dropdown-item" href="#">9.5 - 10</a> <a class="dropdown-item" href="#">10.5 - 11</a> <a class="dropdown-item" href="#">11.5 - 12</a> <a class="dropdown-item" href="#">12 - 13</a> <a class="dropdown-item" href="#">14 - 15</a> </div>
+      </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">About</a> </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">Contact</a> </li>
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="SignIn_Up.html">Register</a> </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0 menu_font" type="submit" >Search</button>
+    </form>
+  </div>
+</nav>
+<div class="nav-expand-lg" style="background-color: white"> <br>
+  <br>
+  <h1 class="text-center">Welcome</h1>
+  <br>
+</div>
+<div class="container" style="background-color: #FFFFFF">
+  <div class="row">
+    <form name="personForm" id="personForm" class="needs-validation container" novalidate>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="inputFirstName">First name*</label>
+          <input type="text" name="firstname" class="form-control" id="inputFirstName" required>
+          <div class="valid-feedback"> Looks good! </div>
+          <div class="invalid-feedback"> Please provide a first name. </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="inputLastName">Last name*</label>
+          <input type="text" name="lastname" class="form-control" id="inputLastName" required>
+          <div class="valid-feedback"> Looks good! </div>
+          <div class="invalid-feedback"> Please provide a last name. </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-9 mb-3">
+          <label for="inputEmail">Email*</label>
+          <input type="email" name="email" class="form-control" id="inputEmail" required>
+          <div class="valid-feedback"> Valid! </div>
+          <div class="invalid-feedback"> Please provide a valid city. </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="inputAge">Age*</label>
+          <input type="number" name="age" class="form-control" id="inputAge" required>
+          <div class="valid-feedback"> Valid! </div>
+          <div class="invalid-feedback"> Please provide a age. </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="inputStreetAddress">Street Address*</label>
+          <input type="text" name="street" class="form-control" id="inputStreetAddress" required>
+          <div class="valid-feedback"> Valid! </div>
+          <div class="invalid-feedback"> Please provide a valid city. </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="inputPhoneNumber">Phone Number</label>
+          <input type="tel" name="phone" class="form-control" id="inputPhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+          <div class="invalid-feedback"> Please provide a valid phone number. </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" name="tos" type="checkbox" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck"> Agree to terms and conditions </label>
+          <div class="invalid-feedback"> You must agree before submitting. </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

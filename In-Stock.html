@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="main.css" rel="stylesheet" type="text/css">
+<title>Product Management</title>
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+		var jsonobj1 = {
+			"Product ID": 1,
+			"Product Description":"Vans Old Skool Shoes",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$60"
+		};
+		var jsonobj2 = {
+			"Product ID": 2,
+			"Product Description":"Vans Allen Losi SK8-HI LTD Benefit",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$100"
+		};
+		var jsonobj3 = {
+			"Product ID": 3,
+			"Product Description":"Vans Skate Reynolds Half Cab '92'",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$70"
+		};
+		var jsonobj4 = {
+			"Product ID": 4,
+			"Product Description":"Vans Skate Chima Pro 2",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$70"
+		};
+		var jsonobj5 = {
+			"Product ID": 5,
+			"Product Description":"Air Jordan 5 Retro 'Oreo' 2021",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$210"
+		};
+		var jsonobj6 = {
+			"Product ID": 6,
+			"Product Description":"Air Jordan 4 Retro 'Lightning'",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$259"
+		};
+		var jsonobj7 = {
+			"Product ID": 7,
+			"Product Description":"Air Jordan 1 Retro High OG",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$204"
+		};
+		var jsonobj8 = {
+			"Product ID": 8,
+			"Product Description":"Air Jordan 5 Retro 'Raging Bull'",
+			"Product Category": "Men's Shoes",
+			"Product Unit Of Measure": "10/10.5/11 US size",
+			"Product Price":"$250"
+		};
+</script>
+<script>
+$(document).ready(function(){
+  $("#shoe1").click(function(){
+      alert("Added " + jsonobj1["Product Description"] + " to the console!")
+      $.each(jsonobj1, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe2").click(function(){
+      alert("Added " + jsonobj2["Product Description"] + " to the console!")
+      $.each(jsonobj2, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe3").click(function(){
+      alert("Added " + jsonobj3["Product Description"] + " to the console!")
+      $.each(jsonobj3, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe4").click(function(){
+      alert("Added " + jsonobj4["Product Description"] + " to the console!")
+      $.each(jsonobj4, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe5").click(function(){
+      alert("Added " + jsonobj5["Product Description"] + " to the console!")
+      $.each(jsonobj5, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe6").click(function(){
+      alert("Added " + jsonobj6["Product Description"] + " to the console!")
+      $.each(jsonobj6, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe7").click(function(){
+      alert("Added " + jsonobj7["Product Description"] + " to the console!")
+      $.each(jsonobj7, function(i, field){
+		  console.log(field);
+      });
+    });
+  $("#shoe8").click(function(){
+      alert("Added " + jsonobj8["Product Description"] + " to the console!")
+      $.each(jsonobj8, function(i, field){
+		  console.log(field);
+      });
+    });
+});
+</script>
+<header>
+  <div class="text-center" style="background-color: #32323c"> <img src="images/logo.svg" alt=""/> </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #32323c;"> <a class="store_name" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent navbarDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="Main.html">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">Preorder</a> </li>
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="In-Stock.html">In Stock</a> </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Brands </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Nike</a> <a class="dropdown-item" href="#">Adidas</a> <a class="dropdown-item" href="#">Under Armour</a> <a class="dropdown-item" href="#">Vans</a> <a class="dropdown-item" href="#">Puma</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Other</a> </div>
+      </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Men </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">7.5 - 8</a> <a class="dropdown-item" href="#">8.5 - 9</a> <a class="dropdown-item" href="#">9 - 9.5</a> <a class="dropdown-item" href="#">9.5 - 10</a> <a class="dropdown-item" href="#">10.5 - 11</a> <a class="dropdown-item" href="#">11.5 - 12</a> <a class="dropdown-item" href="#">12 - 13</a> <a class="dropdown-item" href="#">14 - 15</a> </div>
+      </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active menu_font" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Women </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">7.5 - 8</a> <a class="dropdown-item" href="#">8.5 - 9</a> <a class="dropdown-item" href="#">9 - 9.5</a> <a class="dropdown-item" href="#">9.5 - 10</a> <a class="dropdown-item" href="#">10.5 - 11</a> <a class="dropdown-item" href="#">11.5 - 12</a> <a class="dropdown-item" href="#">12 - 13</a> <a class="dropdown-item" href="#">14 - 15</a> </div>
+      </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">About</a> </li>
+      <li class="nav-item"> <a class="nav-link disabled menu_font" href="#" tableindex="-1" aria-disabled="true">Contact</a> </li>
+      <li class="nav-item"> <a class="nav-link active menu_font" style="color: #EFCD4B" href="SignIn_Up.html">Register</a> </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0 menu_font" type="submit" >Search</button>
+    </form>
+  </div>
+</nav>
+<div class="text-center" style="background-color: white"> <br>
+  <br>
+  <h1 class="text-center">In Stock</h1>
+  <br>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col" style="background-color: white">
+      <p class="text-center"> <img src="images/product/Vans_Navy_Blue.jpg" alt=""/> </p>
+      <p class="text-center">Vans Old Skool Shoes</p>
+      <p class="text-center">$60</p>
+      <input id="shoe1" class="btn btn-primary col" style="background-color: #39638d" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col" style="background-color: white">
+      <p class="text-center"> <img src="images/product/Vans_Losi.jpg" alt=""/> </p>
+      <p class="text-center">Vans Allen Losi SK8-HI LTD Benefit</p>
+      <p class="text-center">$100</p>
+      <input id="shoe2" class="btn btn-primary col" style="background-color: #646162" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col" style="background-color: white">
+      <p class="text-center"> <img src="images/product/Vans_Skate.jpg" alt=""/> </p>
+      <p class="text-center">Vans Skate Reynolds Half Cab '92'</p>
+      <p class="text-center">$70</p>
+      <input id="shoe3" class="btn btn-primary col" style="background-color: #b3724d" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col" style="background-color: white">
+      <p class="text-center"> <img src="images/product/Vans_Pro.jpg" alt=""/> </p>
+      <p class="text-center">Vans Skate Chima Pro 2</p>
+      <p class="text-center">$70</p>
+      <input id="shoe4" class="btn btn-primary col" style="background-color: #222020" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="text-center"> <img src="images/product/jor5.jpeg" alt="" class="thumbnail"/> </p>
+      <p class="text-center">Air Jordan 5 Retro 'Oreo' 2021</p>
+      <p class="text-center">$210</p>
+      <input id="shoe5" class="btn btn-primary col" style="background-color: #11120e" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col">
+      <p class="text-center"> <img src="images/product/air4.jpeg" alt="" class="thumbnail"/> </p>
+      <p class="text-center">Air Jordan 4 Retro "Lightning"</p>
+      <p class="text-center">$259</p>
+      <input id="shoe6" class="btn btn-primary col" style="background-color: #fad548" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col">
+      <p class="text-center"> <img src="images/product/air10.jpeg" alt="" class="thumbnail"/> </p>
+      <p class="text-center">Air Jordan 1 Retro High OG</p>
+      <p class="text-center">$204</p>
+      <input id="shoe7" class="btn btn-primary col" style="background-color: #63a3c8" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+    <div class="col">
+      <p class="img-fluid"> <img src="images/product/air23.jpeg" alt="" class="thumbnail"/> </p>
+      <p class="text-center">Air Jordan 5 Raging Bull</p>
+      <p class="text-center">$250</p>
+      <input id="shoe8" class="btn btn-primary col" style="background-color: #fd4343" type="button" value="Purchase">
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<footer>Copyright 2021. Not a real website.</footer>
+</body>
+</html>
