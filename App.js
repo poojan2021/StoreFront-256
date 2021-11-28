@@ -153,8 +153,8 @@ try {
     var mongodb = require('mongodb');
     var MongoClient = mongodb.MongoClient;
     res.header("Access-Control-Allow-Origin", "*");
-    if(!req.query.studentID) {
-        return res.send({"result": "missing the student ID"});
+    if(!req.query.FirstName) {
+        return res.send({"result": "missing the First Name"});
     } else {
         var url = 'mongodb://localhost:27017';
         MongoClient.connect(url, function (err, client) {
